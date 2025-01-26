@@ -67,7 +67,7 @@ Logo of the website
 
 ![Screenshot_of_cart](image/screenshot1.png)
 This shows the items added to the cart
-![Screenshot_of_payment_and_token_generated](image/screenshot2.jpeg)
+![Screenshot_of_payment_and_token_generated](image/screenshot2.png)
 The user's that paid the amount will get a unique token and using this token they can get the food items
 
 
