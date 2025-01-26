@@ -45,7 +45,7 @@ Open the project folder, then use a local web server or open the HTML file in a 
 ### Project Documentation
 
 
-# Screenshots (Add at least 3)
+# Screenshots 
 ![Dash Board](dashboard.jpeg)
 ADash Board of the canteen administrator with the features adding the dish, viewing orders and adding the important notifications.
 
