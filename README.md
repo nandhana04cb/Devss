@@ -91,4 +91,4 @@ The user's that paid the amount will get a unique token and using this token the
 - Riya S: Front-end, Documentation
 
 ---
-Made with ❤️ at TinkerHu
+Made with ❤️ at TinkerHub
