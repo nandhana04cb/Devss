@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    width: 20%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li span {
+    color: red;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content .search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.content .search input[type="text"] {
+    padding: 10px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content .search button {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content .search button:hover {
+    background-color: #45a049;
+}
+
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-section .menu {
+    flex: 1 1 45%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-section .menu h3 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+.menu-section .menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-section .menu ul li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-section .menu ul li button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.menu-section .menu ul li button:hover {
+    background-color: darkred;
+}
+
+.menu-section .menu button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-section .menu button:hover {
+    background-color: #45a049;
+}
+
+button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 0.2rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+.count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0.5rem;
+}
+
+/* Modify the buttons for alignment and spacing */
+.menu-section .menu ul li .count-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;  /* This will make the plus and minus buttons closer */
+}
+
+.menu-section .menu ul li .count-btn button {
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.menu-section .menu ul li .count-btn button:hover {
+    background-color: #45a049;
+}
+
+/* For vertical alignment of plus and minus buttons */
+.vertical-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;  /* Space between buttons */
+}
+
+.vertical-buttons button {
+    width: 40px;  /* Set a fixed width for vertical buttons */
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Kalavara - Admin Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container h1 img {
+            margin-left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header-container a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-container a:hover {
+            background-color: white;
+            color: #4CAF50;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .login-container input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-container button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+
+        .signup-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .signup-container a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>e-Kalavara
+            <img src="C:\Users\nandh\Downloads\WhatsApp Image 2025-01-25 at 6.07.08 PM.jpeg" alt="e-Kalavara Logo">
+        </h1>
+        <a href="login_user.html">Back to User Login</a>
+    </div>
+
+    <div class="login-container">
+        <h2>Administrator Login</h2>
+        <form id="admin-login-form">
+            <label for="admin-email">Email ID</label>
+            <input type="email" id="admin-email" name="admin-email" placeholder="Enter your email" required>
+
+            <label for="admin-password">Password</label>
+            <input type="password" id="admin-password" name="admin-password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="signup-container">
+            <p>Need help? <a href="#">Contact Support</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("admin-login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Hardcoded credentials
+            const adminEmail = "admin@gmail.com";
+            const adminPassword = "12345678";
+
+            // Fetch user input
+            const inputEmail = document.getElementById("admin-email").value;
+            const inputPassword = document.getElementById("admin-password").value;
+
+            // Validate credentials
+            if (inputEmail === adminEmail && inputPassword === adminPassword) {
+                alert("Login successful!");
+                // Redirect to another page (e.g., admin dashboard)
+                window.location.href = "dashboard_admin.html";
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

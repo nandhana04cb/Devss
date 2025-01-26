@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Kalavara - Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-container h1 img {
+            margin-left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header-container a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-container a:hover {
+            background-color: white;
+            color: #4CAF50;
+        }
+
+        .dashboard-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .card h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>e-Kalavara
+            <img src="/home/ria-s/ProgramFiles/canteen_website/Static/image/logo.jpeg" alt="e-Kalavara Logo">
+        </h1>
+        <a href="login_user.html">Logout</a>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Add New Dish Section -->
+        <div class="card">
+            <h2>Add New Dish</h2>
+            <form id="add-dish-form">
+                <div class="form-group">
+                    <label for="dish-name">Dish Name</label>
+                    <input type="text" id="dish-name" name="dish-name" placeholder="Enter dish name" required>
+                </div>
+                <div class="form-group">
+                    <label for="section">Section</label>
+                    <select id="section" name="section" required>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="snacks">Snacks</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cost">Cost (₹)</label>
+                    <input type="number" id="cost" name="cost" placeholder="Enter cost" required>
+                </div>
+                <div class="form-group">
+                    <label for="max-order">Max Order Quantity</label>
+                    <input type="number" id="max-order" name="max-order" placeholder="Enter max order quantity" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Add Dish</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- View Orders Section -->
+        <div class="card">
+            <h2>View Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dish Name</th>
+                        <th>Section</th>
+                        <th>Quantity Ordered</th>
+                        <th>Total Cost (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Masala Dosa</td>
+                        <td>Breakfast</td>
+                        <td>25</td>
+                        <td>25.00</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Biryani</td>
+                        <td>Lunch</td>
+                        <td>40</td>
+                        <td>80.00</td>
+                    </tr>
+                    <!-- Add dynamic rows here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Notifications Section -->
+        <div class="card">
+            <h2>Manage Notifications</h2>
+            <form id="notification-form">
+                <div class="form-group">
+                    <label for="notification-message">Notification Message</label>
+                    <input type="text" id="notification-message" name="notification-message" placeholder="Enter notification message" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Send Notification</button>
+                </div>
+            </form>
+
+            <h3>Current Notifications</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Message</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunch menu updated!</td>
+                        <td><button onclick="removeNotification(this)">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>Special discount on snacks today!</td>
+                        <td><button onclick="removeNotification(this)">Remove</button></td>
+                    </tr>
+                    <!-- Add dynamic rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for form submission handling (e.g., AJAX to backend, dynamic updates)
+        document.getElementById('add-dish-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Dish added successfully!');
+            // Add logic to send form data to the backend
+        });
+
+        document.getElementById('notification-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Notification sent successfully!');
+            // Add logic to send notification data to the backend
+        });
+
+        function removeNotification(button) {
+            const row = button.parentElement.parentElement;
+            row.remove();
+            alert('Notification removed successfully!');
+        }
+    </script>
+</body>
+</html>

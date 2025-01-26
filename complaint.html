@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Header Styling */
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            display: flex; /* Align content on the same line */
+            align-items: center; /* Vertically center the text and image */
+            gap: 10px; /* Space between the logo and the text */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .header img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* Adjust body padding to account for the fixed header */
+        body {
+            padding-top: 80px;
+        }
+
+        /* Form Styling */
+        .form-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea,
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>e-Kalavara</h1>
+        <!-- Image right next to text -->
+        <img src="C:\Users\MEGHA K A\Downloads\kalavara.png" alt="e-Kalavara Logo">
+    </div>
+
+    <!-- Complaint Form -->
+    <h1>Submit a Complaint</h1>
+
+    <div class="form-container">
+        <form id="complaintForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" placeholder="Your name" required><br>
+
+            <label for="message">Complaint:</label><br>
+            <textarea id="message" placeholder="Enter your complaint" required></textarea><br>
+
+            <button type="submit">Submit Complaint</button>
+        </form>
+
+        <div class="message" id="responseMessage"></div>
+    </div>
+
+    <!-- EmailJS Integration -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your user_id (Replace with your actual user_id from EmailJS)
+        (function () {
+            emailjs.init("mKmG0yXMcKTjS_hqP");  // Replace with your user ID
+        })();
+
+        // Handle the form submission
+        document.getElementById("complaintForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var message = document.getElementById("message").value;
+
+            // Define template parameters
+            var templateParams = {
+                name: name,
+                message: message,
+                to_email: "meghajayachandran2003@gmail.com",  // Change this to the recipient's email
+            };
+
+            // Send the email via EmailJS
+            emailjs.send("service_90zar48", "template_e2z9406", templateParams) // Replace with your service_id and template_id
+                .then(function (response) {
+                    console.log('Success:', response);
+                    document.getElementById("responseMessage").innerHTML = 'Complaint sent successfully!';
+                    document.getElementById("complaintForm").reset(); // Reset the form
+                }, function (error) {
+                    console.log('Error:', error);
+                    document.getElementById("responseMessage").innerHTML = 'Error sending complaint. Please try again.';
+                });
+        });
+    </script>
+</body>
+
+</html>

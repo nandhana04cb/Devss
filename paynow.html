@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Payment</title>
+</head>
+<body>
+    <h1>Redirecting to Google Pay...</h1>
+    <p>Please wait while we redirect you to complete your payment.</p>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const amount = urlParams.get('amount'); // Extract the amount
+        const upiID = urlParams.get('upiID'); // Extract the UPI ID
+        const name = urlParams.get('name'); // Extract the payee name
+
+        // Validate the required parameters
+        if (!amount || !upiID || !name) {
+            alert("Missing payment details. Please try again.");
+            window.history.back(); // Go back to the previous page
+        } else {
+            // Construct the UPI deep link
+            const upiLink = `paynow.html?amount=350.00&upiID=nandhana2004babu@oksbi&name=e-Kalavara`
+
+            // Redirect to the UPI deep link
+            window.location.href = upiLink;
+        }
+    </script>
+</body>
+</html>

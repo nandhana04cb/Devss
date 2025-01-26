@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Kalavara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>e-Kalavara</h1>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="complaint.html">Complaint</a>
+            <a href="due.html">Dues</a>
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar">
+            <h2>Notifications</h2>
+            <ul>
+                <li>Note: <span>Canteen will remain closed on Saturdays.</span></li>
+                <li>Special Dish Day on Friday!</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="menu-section">
+                <!-- Breakfast Menu -->
+                <div class="menu">
+                    <h3>Breakfast</h3>
+                    <ul>
+                        <li>
+                            Idli - ₹20
+                            <div class="count-btn">
+                                <button onclick="decreaseCount(this, 'idli', 20)">-</button>
+                                <span class="count" id="idli-count">0</span>
+                                <button onclick="increaseCount(this, 'idli', 20)">+</button>
+                            </div>
+                        </li>
+                        <li>
+                            Dosa - ₹30
+                            <div class="count-btn">
+                                <button onclick="decreaseCount(this, 'dosa', 30)">-</button>
+                                <span class="count" id="dosa-count">0</span>
+                                <button onclick="increaseCount(this, 'dosa', 30)">+</button>
+                            </div>
+                        </li>
+                        <li>
+                            Poori - ₹25
+                            <div class="count-btn">
+                                <button onclick="decreaseCount(this, 'poori', 25)">-</button>
+                                <span class="count" id="poori-count">0</span>
+                                <button onclick="increaseCount(this, 'poori', 25)">+</button>
+                            </div>
+                        </li>
+                        <li>
+                            Paratha - ₹40
+                            <div class="count-btn">
+                                <button onclick="decreaseCount(this, 'paratha', 40)">-</button>
+                                <span class="count" id="paratha-count">0</span>
+                                <button onclick="increaseCount(this, 'paratha', 40)">+</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+<!-- Lunch Menu -->
+<div class="menu">
+    <h3>Lunch</h3>
+    <ul>
+        <li>
+            Rice - ₹50
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'rice', 50)">-</button>
+                <span class="count" id="rice-count">0</span>
+                <button onclick="increaseCount(this, 'rice', 50)">+</button>
+            </div>
+        </li>
+        <li>
+            Curry - ₹60
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'curry', 60)">-</button>
+                <span class="count" id="curry-count">0</span>
+                <button onclick="increaseCount(this, 'curry', 60)">+</button>
+            </div>
+        </li>
+        <li>
+            Chapati - ₹15
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'chapati', 15)">-</button>
+                <span class="count" id="chapati-count">0</span>
+                <button onclick="increaseCount(this, 'chapati', 15)">+</button>
+            </div>
+        </li>
+        <li>
+            Paneer - ₹70
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'paneer', 70)">-</button>
+                <span class="count" id="paneer-count">0</span>
+                <button onclick="increaseCount(this, 'paneer', 70)">+</button>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Dinner Menu -->
+<div class="menu">
+    <h3>Dinner</h3>
+    <ul>
+        <li>
+            Biriyani - ₹80
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'biriyani', 80)">-</button>
+                <span class="count" id="biriyani-count">0</span>
+                <button onclick="increaseCount(this, 'biriyani', 80)">+</button>
+            </div>
+        </li>
+        <li>
+            Paratha - ₹40
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'dinner-paratha', 40)">-</button>
+                <span class="count" id="dinner-paratha-count">0</span>
+                <button onclick="increaseCount(this, 'dinner-paratha', 40)">+</button>
+            </div>
+        </li>
+        <li>
+            Paneer Curry - ₹70
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'paneer-curry', 70)">-</button>
+                <span class="count" id="paneer-curry-count">0</span>
+                <button onclick="increaseCount(this, 'paneer-curry', 70)">+</button>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Snacks Menu -->
+<div class="menu">
+    <h3>Snacks</h3>
+    <ul>
+        <li>
+            Samosa - ₹15
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'samosa', 15)">-</button>
+                <span class="count" id="samosa-count">0</span>
+                <button onclick="increaseCount(this, 'samosa', 15)">+</button>
+            </div>
+        </li>
+        <li>
+            Cake - ₹25
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'cake', 25)">-</button>
+                <span class="count" id="cake-count">0</span>
+                <button onclick="increaseCount(this, 'cake', 25)">+</button>
+            </div>
+        </li>
+        <li>
+            Juice - ₹20
+            <div class="count-btn">
+                <button onclick="decreaseCount(this, 'juice', 20)">-</button>
+                <span class="count" id="juice-count">0</span>
+                <button onclick="increaseCount(this, 'juice', 20)">+</button>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+<button id="pay-now-btn">Pay Now</button>
+<!-- Cart and Checkout Section -->
+
+                <!-- Other Menus -->
+                <!-- (Lunch, Dinner, Snacks content remains unchanged for brevity) -->
+
+            </div>
+
+            <!-- Cart and Checkout Section -->
+            <div class="cart">
+                <h3>Your Cart</h3>
+                <div id="cart-items">
+                    <p>No items added yet.</p>
+                </div>
+                <div class="total">
+                    <p>Total Items: <span id="total-items">0</span></p>
+                    <p>Total Amount: <span id="total-amount">₹0.00</span></p>
+                </div>
+                <button id="pay-now-btn">Pay Now</button>
+                <button id="view-dues-btn">Add Dues</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        let cart = {}; // To store item counts and prices
+
+        function increaseCount(button, item, price) {
+            const countSpan = button.previousElementSibling; 
+            let count = parseInt(countSpan.textContent);
+            count++;
+            countSpan.textContent = count; 
+
+            // Update cart
+            if (!cart[item]) {
+                cart[item] = { count: 0, price: price };
+            }
+            cart[item].count = count;
+
+            updateCart();
+        }
+
+        function decreaseCount(button, item, price) {
+            const countSpan = button.nextElementSibling; 
+            let count = parseInt(countSpan.textContent);
+            if (count > 0) {
+                count--; 
+                countSpan.textContent = count; 
+
+                // Update cart
+                cart[item].count = count;
+
+                updateCart();
+            }
+        }
+
+        function updateCart() {
+            let totalItems = 0;
+            let totalAmount = 0;
+            let cartContent = '';
+
+            for (let item in cart) {
+                if (cart[item].count > 0) {
+                    totalItems += cart[item].count;
+                    totalAmount += cart[item].count * cart[item].price;
+                    cartContent += `<p>${item.charAt(0).toUpperCase() + item.slice(1)}: ${cart[item].count} x ₹${cart[item].price}</p>`;
+                }
+            }
+
+            document.getElementById('total-items').textContent = totalItems;
+            document.getElementById('total-amount').textContent = `₹${totalAmount.toFixed(2)}`;
+            document.getElementById('cart-items').innerHTML = cartContent || '<p>No items added yet.</p>';
+        }
+
+       // Handle Pay Now Button
+        document.getElementById('pay-now-btn').addEventListener('click', () => {
+         const totalAmount = parseFloat(document.getElementById('total-amount').textContent.replace('₹', ''));
+         <a href="due.html">Dues</a>
+        if (totalAmount > 0) {
+        const upiID = "nandhana2004babu@oksbi"; // Replace with the default UPI ID
+        const name = "e-Kalavara"; // Payee name
+        
+        // Dynamically construct the payment page URL
+        const paymentPage = `paynow.html?amount=${totalAmount.toFixed(2)}&upiID=${upiID}&name=${encodeURIComponent(name)}`;
+
+        // Redirect to the payment page
+        window.location.href = paymentPage;
+        } else {
+        alert("Your cart is empty. Please add items before proceeding to payment.");
+        }
+        })
+
+
+      
+
+
+        // Handle View Dues Button
+        document.getElementById('view-dues-btn').addEventListener('click', () => {
+            alert('Redirecting to Dues Page...');
+            window.location.href = 'due.html'; // Redirect to dues page
+        });
+
+        
+    </script>
+</body>
+</html>

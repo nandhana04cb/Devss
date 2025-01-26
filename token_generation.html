@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .token-code {
+            font-size: 24px;
+            color: #2C3E50;
+            font-weight: bold;
+            background-color: #e1f7d5;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Payment Successful</h1>
+        <p>Your preorder is successful!</p>
+        <p>Your token code is:</p>
+        <div class="token-code" id="tokenCode"></div>
+    </div>
+
+    <script>
+        // Function to generate a random 6-digit token
+        function generateToken() {
+            const token = Math.floor(100000 + Math.random() * 900000); // Generates a random 6-digit number
+            document.getElementById('tokenCode').textContent = token;
+        }
+
+        // Automatically generate a token on page load
+        window.onload = generateToken;
+    </script>
+
+</body>
+</html>
