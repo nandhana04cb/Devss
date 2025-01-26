@@ -45,15 +45,15 @@ Open the project folder, then use a local web server or open the HTML file in a 
 
 
 # Screenshots 
-![Dash Board](dashboard.jpeg)
+![Dash Board](image/dashboard.jpeg)
 ADash Board of the canteen administrator with the features adding the dish, viewing orders and adding the important notifications.
 
-![Due](due.jpeg)
+![Due](image/due.jpeg)
 In this the due's of the users are listed
-![user_Dashboard](user_dashboard.jpeg)
+![user_Dashboard](image/user_dashboard.jpeg)
 User's Dashboard containing ordering the food, showing the canteen's notificaions and the bottom of the website the total amount will be shown
 # Diagrams
-![Workflow](flowchart.jpeg)
+![Workflow](image/flowchart.jpeg)
 The workflow flowchart of the webapplication is given
 
 For Hardware:
@@ -62,12 +62,12 @@ For Hardware:
 # Build Photos
 
 
-![logo](logo.jpeg)
+![logo](image/logo.jpeg)
 Logo of the website
 
-![Screenshot_of_cart](screenshot1.png)
+![Screenshot_of_cart](image/screenshot1.png)
 This shows the items added to the cart
-![Screenshot_of_payment_and_token_generated](screenshot2.jpeg)
+![Screenshot_of_payment_and_token_generated](image/screenshot2.jpeg)
 The user's that paid the amount will get a unique token and using this token they can get the food items
 
 
