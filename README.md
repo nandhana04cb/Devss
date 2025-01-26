@@ -71,12 +71,6 @@ This shows the items added to the cart
 The user's that paid the amount will get a unique token and using this token they can get the food items
 
 
-### Project Demo
-
-
-# Additional Demos
-[Add any extra demo materials/links]
-
 ## Team Contributions
 - Nandhana C B: Back-end, js, flask
 - Megha K A: js, Back-end, Documentation, Flowchart
