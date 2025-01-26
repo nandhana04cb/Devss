@@ -36,7 +36,6 @@ Tools used
 - Integrated development environment (Visual Studio Code)
 - ChatGPT
   ### Implementation
-For Software:
 # Installation
 Installing any necessary frontend libraries and dependencies is the initial step in setting up the project. Use CDNs to include JavaScript libraries in your HTML files, or download them as needed. Installing any required libraries with npm install <library> and initializing npm in your project folder with npm init -y are optional for local setups. Open the project folder, then use a local web server or open the HTML file in a browser to start the application. The "Live Server" extension in Visual Studio Code offers a simple method of serving your files.Alternatively, you can execute python -m http.server in the project folder to utilize Python's built-in HTTP server. After it is finished, go to http://127.0.0.1:8000 or the URL your server has supplied to access your platform.
 # Run
