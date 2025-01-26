@@ -10,7 +10,7 @@
 - Member 2: Megha K A - NSS college of engineering
 - Member 3: Riya S - NSS college of engineering
   ### Hosted Project Link
-  https://github.com/nandhana04cb/Devss_TinkHerHack
+ (https://www.youtube.com/watch?v=cyeo47R2Xkw)
   ### Project Description
 e-Kalavara is a platform that simplifies college canteen operations. Students and staff can view menus, pre-book meals with digital tokens, track dues, and submit complaints. It also includes an admin interface to update menus and monitor student dues, ensuring smooth and efficient management.
 
